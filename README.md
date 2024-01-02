@@ -16,5 +16,11 @@ The time it takes for a program to run varies depending on the system configurat
 - Compare algorithms and say which one is better regardless of computer differences.
 
 ### O(n)
-Linear time. As inputs increase, the operations increase linearly. 
+Linear time. As inputs increase, the operations increase linearly (proportionally).
 3 items -> 3 operations, 4 items -> 4 operations, .... n items -> n operations
+Exercise 1: [https://replit.com/@nvnsyaswanth/ds-algo#BigO/BigOExercises.js:2:21](https://replit.com/@nvnsyaswanth/ds-algo#BigO/BigOExercises.js:2:21)
+Exercise 2: [https://replit.com/@nvnsyaswanth/ds-algo#BigO/BigOExercises.js:2:21](https://replit.com/@nvnsyaswanth/ds-algo#BigO/BigOExercises.js:19:28)
+
+### O(1)
+Constant time. No matter how big the input is, there is only 1 operation. 
+Even if we have O(2), O(3), O(10), O(100) -> Always represent constant time and considered O(1)
