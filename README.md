@@ -77,7 +77,9 @@ Overall Big O is **O(n + n^2)**. But as inputs increase, the value of _n^2_ will
 Overall Big O -> O(n + n^2) -> O(n^2).  
 
 ### O(log n)
+Searching algorithms
 ### O(n log n)
+Sorting algorithms
 ### O(n^2)
 Quadratic time. Nested Loops.  
 Log all pairs of array. What is the Big O of below?
@@ -95,4 +97,5 @@ Rule of thumb:
 - If we have nested loops as above it becomes a multiplication **O(n * n) - > O(n^2)**
 
 ### O(2^n)
+Recursive algorithms
 ### O(n!)
