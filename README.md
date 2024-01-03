@@ -14,6 +14,8 @@ What makes a code best?
 - Memory - Space complexity
 
 Generally, there is a trade off between Speed and Memory. If you want the program to run faster, you must burn extra memory. If you want it to be memory efficient, you must sacrifice with Speed.  
+Sometimes Readability may be more important than Scalability. Sometimes Time complexity is important than Space Complexity. Choose wisely.  
+**Premature optimization is the root of all evil 😈**  
 
 ## BIG O 😲:
 - There are many ways to solve a problem through code. Both efficient and inefficient ways.
@@ -131,7 +133,7 @@ What causes Space complexity?
 - Function call
 - Allocations
 
-When we talk about Space Complexity, we don't really care much about the memory of the input that we pass, **_we talk about the extra space it consumes._**  
+When we talk about **Space Complexity**, we **DON'T** really care much **about the memory of the input** that we pass, **_we talk about the extra space it consumes._**  
 
 ```
 // Space complexity O(1)
@@ -154,3 +156,34 @@ function arrayOfHiNTimes(n) {
 }
 ```
 We have 1 variable and a data strcuture. We're allocating memory every time we assign "hi" to an item in array. So, the Big O would be **O(1 + n) => O(n).**  
+
+## Data Structures:
+A data structure is a collection of values. Each one is good and is specialized for it's own thing.  
+We have a ton of data strcutures. But there are a handful which we generally use.  
+1. Arrays
+2. Hash Tables
+3. Linked Lists
+4. Stacks
+5. Queues
+6. Trees
+7. Graphs
+
+There are two parts to understand a data structure:
+1. How to build one?
+2. How to use it?
+
+Based on scenario, we need to pick the data structures wisely.  
+
+Programs tend to access memory that is nearby. The closer the data is to the CPU and the less they have to travel between memory addresses in a RAM, the faster the program can run. To further optimize this, the CPU has a cache (LRU cache, L1 cache) which maintains the very very recent data.  
+
+**Why is this important for Data Structures?**
+Data Structures are ways to store information.  
+
+``` var a = 1 ``` occupies 4 memory addresses in an 8-bit system (1 memory address stores 8 bits).  
+``` var b = 4 ``` occupies the next 4 memory addresses in an 8-bit system (1 memory address stores 8 bits).
+
+Some data structures in RAM are organized right next to each other. Some are organized apart from each other. And they have different Pros and Cons.
+
+Our Goal 🎯: Minimize the operations that we need to do for the CPU to read/write information.  
+
+### Arrays:
