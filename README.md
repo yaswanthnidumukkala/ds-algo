@@ -3,7 +3,17 @@
 ### Readable 📖
 - Is your code clean and others understands it.
 ### Scalable 📈
-- Does the code does not lag and perform well when inputs increase?
+- Speed: Does the code does not lag and perform well when inputs increase? How fast is our code? How many operations that it's gonna cost?
+  - We can calculate this using BIG O (Time complexity).
+- Memory: How much memory does the code take? It's not good to use lots of memory.
+  - Space Complexity
+### Pillars of Programming
+What makes a code best?
+- Readable
+- Speed - Time complexity
+- Memory - Space complexity
+
+Generally, there is a trade off between Speed and Memory. If you want the program to run faster, you must burn extra memory. If you want it to be memory efficient, you must sacrifice with Speed.  
 
 ## BIG O 😲:
 - There are many ways to solve a problem through code. Both efficient and inefficient ways.
@@ -99,9 +109,48 @@ Rule of thumb:
 ### O(2^n)
 Recursive algorithms
 ### O(n!)
+We add a nested loop for every input we have.
+The most expensive. Mostly we don't encounter this because of it's complexity.
 
 ## What can cause time in a function?
 - Operations (+, -, *, /)
 - Comparisons (=, <>, !=)
 - Looping (for, while)
 - Outside function call (function())
+
+## Space complexity:
+When a program executes, it has two ways to remember things
+- Heap: Store variables
+- Stack: Keep track of function calls 
+
+Very similar to how we calculate time complexity. We look at the variables we are using and determine.  
+
+What causes Space complexity?
+- Variables
+- Data structures
+- Function call
+- Allocations
+
+When we talk about Space Complexity, we don't really care much about the memory of the input that we pass, **_we talk about the extra space it consumes._**  
+
+```
+// Space complexity O(1)
+function boooo(n) {
+  for (let i = 0; i < n; i++) {
+    console.log("booooo");
+  }
+}
+```
+We only have 1 variable i. So, O(1).  
+
+```
+// #6 Space complexity O(n)
+function arrayOfHiNTimes(n) {
+  var hiArray = [];
+  for (let i = 0; i < n; i++) {
+    hiArray[i] = "hi";
+  }
+  return hiArray;
+}
+```
+We have 1 variable and a data strcuture. We're allocating memory every time we assign "hi" to an item in array. So, the Big O would be **O(1 + n) => O(n).**  
