@@ -53,10 +53,46 @@ function compress(list1, list2) {
 ```
 In the above code, lot of people get confused and assume Big O as O(n + n) -> O(n). But it actually is **'O(n + m)'** we get different terms for different inputs.
 
-#### Rule 4: Drop Non-Dominants
+#### Rule 4: Drop Non-Dominant terms
+This rule states that we care about the most important term in the Big O. Consider below example.  
+
+```
+function printAllNumbersThenAllPairSums(numbers) {
+  console.log("these are the numbers:");
+  numbers.forEach(function(number) {
+    console.log(number);
+  }); **// O(n)**
+
+  console.log("and these are their sums:");
+  numbers.forEach(function(firstNumber) {
+    numbers.forEach(function(secondNumber) {
+      console.log(firstNumber + secondNumber);
+    });
+  }); **// Nested for loop -> O(n^2)**
+}
+
+**// Overall Big O -> O(n + n^2)**
+```
+Overall Big O is **O(n + n^2)**. But as inputs increase, the value of _n^2_ will be significantly higher than _n_. So we can drop that part and our final Big O becomes O(n^2).  
+Overall Big O -> O(n + n^2) -> O(n^2).  
 
 ### O(log n)
 ### O(n log n)
 ### O(n^2)
+Quadratic time. Nested Loops.  
+Log all pairs of array. What is the Big O of below?
+```
+function logAllPairs(array) {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array.length; j++) {
+      console.log(`pair (${array[i]}, ${array[j]})`);
+    }
+  }
+}
+```
+Rule of thumb:  
+- If we have two for loops one after another, it's an addition **O(n + n) -> O(2n) -> O(n)**
+- If we have nested loops as above it becomes a multiplication **O(n * n) - > O(n^2)**
+
 ### O(2^n)
 ### O(n!)
