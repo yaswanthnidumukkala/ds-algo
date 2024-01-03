@@ -24,3 +24,9 @@ Exercise 2: [https://replit.com/@nvnsyaswanth/ds-algo#BigO/BigOExercises.js:2:21
 ### O(1)
 Constant time. No matter how big the input is, there is only 1 operation.   
 Even if we have O(2), O(3), O(10), O(100) -> Always represent constant time and considered O(1)  
+
+### Rules to calculate Big O
+#### Rule 1: Worst Case
+#### Rule 2: Remove Constants
+#### Rule 3: Different terms for inputs
+#### Rule 4: Drop Non-Dominants
