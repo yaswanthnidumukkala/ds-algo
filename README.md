@@ -166,7 +166,8 @@ We have a ton of data strcutures. But there are a handful which we generally use
 4. Stacks
 5. Queues
 6. Trees
-7. Graphs
+7. Tries
+8. Graphs
 
 There are two parts to understand a data structure:
 1. How to build one?
@@ -175,6 +176,8 @@ There are two parts to understand a data structure:
 Based on scenario, we need to pick the data structures wisely.  
 
 Programs tend to access memory that is nearby. The closer the data is to the CPU and the less they have to travel between memory addresses in a RAM, the faster the program can run. To further optimize this, the CPU has a cache (LRU cache, L1 cache) which maintains the very very recent data.  
+
+Mind map 🧠: https://coggle.it/diagram/W5E5tqYlrXvFJPsq/t/master-the-interview-click-here-for-course-link/c25f98c73a03f5b1107cd0e2f4bce29c9d78e31655e55cb0b785d56f0036c9d1
 
 **Why is this important for Data Structures?**
 Data Structures are ways to store information.  
@@ -185,5 +188,16 @@ Data Structures are ways to store information.
 Some data structures in RAM are organized right next to each other. Some are organized apart from each other. And they have different Pros and Cons.
 
 Our Goal 🎯: Minimize the operations that we need to do for the CPU to read/write information.  
+
+Operations on Data structure:
+1. Insertion
+2. Deletion
+3. Traversal
+4. Searching
+5. Sorting
+6. Access
+
+Each data strcuture have their own PROs and CONs for each one of the operations.  
+Big O Cheat sheet: https://www.bigocheatsheet.com/
 
 ### Arrays:
