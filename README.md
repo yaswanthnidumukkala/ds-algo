@@ -73,8 +73,8 @@ function printAllNumbersThenAllPairSums(numbers) {
 
 **// Overall Big O -> O(n + n^2)**
 ```
-Overall Big O is **O(n + n^2)**. But as inputs increase, the value of _n^2_ will be significantly higher than _n_. So we can drop that part and our final Big O becomes O(n^2).  
-Overall Big O -> O(n + n^2) -> O(n^2).  
+Overall Big O is **O(n + n^2)**. But as inputs increase, the value of _n^2_ will be significantly higher than _n_. So we can drop that part and our final Big O becomes **O(n^2)**.  
+Overall Big O -> **O(n + n^2) -> O(n^2)**.  
 
 ### O(log n)
 Searching algorithms
@@ -99,3 +99,9 @@ Rule of thumb:
 ### O(2^n)
 Recursive algorithms
 ### O(n!)
+
+## What can cause time in a function?
+- Operations (+, -, *, /)
+- Comparisons (=, <>, !=)
+- Looping (for, while)
+- Outside function call (function())
