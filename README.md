@@ -21,6 +21,7 @@ Sometimes Readability may be more important than Scalability. Sometimes Time com
 - There are many ways to solve a problem through code. Both efficient and inefficient ways.
 - BIG O notation is used to measure the idea of scalable. Code that can scale.
 - BIG O Cheatsheet: https://zerotomastery.io/cheatsheets/big-o-cheat-sheet/?utm_source=udemy&utm_medium=coursecontent
+- Data Strcutures, Algorithms and their BIG Os: https://www.bigocheatsheet.com/
 - ⭐**ALGORITHMIC EFFICIENCY**: When we go bigger and bigger with the input, how much does the algorithm slows down? The lesser the better 💪
 
 The time it takes for a program to run varies depending on the system configuration. So, how can we measure if the code is efficient? And what is a scalable code (the code does not lag and perform well when inputs increase)
@@ -182,8 +183,9 @@ Mind map 🧠: https://coggle.it/diagram/W5E5tqYlrXvFJPsq/t/master-the-interview
 **Why is this important for Data Structures?**
 Data Structures are ways to store information.  
 
-``` var a = 1 ``` occupies 4 memory addresses in an 8-bit system (1 memory address stores 8 bits).  
-``` var b = 4 ``` occupies the next 4 memory addresses in an 8-bit system (1 memory address stores 8 bits).
+``` var a = 1 ``` occupies 4 memory addresses in an 32-bit system (1 memory address stores 8 bits).  
+``` var b = 4 ``` occupies the next 4 memory addresses in an 32-bit system (1 memory address stores 8 bits).  
+Know more here: https://www.geeksforgeeks.org/difference-32-bit-64-bit-operating-systems/
 
 Some data structures in RAM are organized right next to each other. Some are organized apart from each other. And they have different Pros and Cons.
 
@@ -198,6 +200,32 @@ Operations on Data structure:
 6. Access
 
 Each data strcuture have their own PROs and CONs for each one of the operations.  
-Big O Cheat sheet: https://www.bigocheatsheet.com/
 
 ### Arrays:
+- Sometimes called lists
+- Organizes items sequentially in memory
+- Simplest and most widely used
+- Have least amount of rules
+- As they are stored in order, they have the smallest footprint
+- Use when you want to store some data and iterate over it step by step
+  - lookup: O(1)
+  - push: O(1)
+  - insert: O(n)
+  - delete: O(n)
+
+``` const strings = ['a', 'b', 'c', 'd']; ```
+As arrays store items sequentially in memory, each item in the above array occupy 4 memory locations. 'a' occupies 4 locations and the next 4 memory locations are immediately occupied by 'b'.  
+So, it becomes easier to access the items when we know the index. That's the reason for **lookup and push**, we have O(1).  
+``` 
+strings.push("e"); 
+// O(1). The program already knows the memory location of the array. And it also knows the memory location of the last element.
+// So it will be only 1 operation to add the element at the end of the array.
+
+strings.unshift("x"); // Adds item to the start.
+// O(n). It adds the element to the beginning of the array. But it has to go through every element and re-assign the indices.
+
+strings.splice(2, 0, "something"); // Adds item at the defined location.
+// Here we are adding an element in the middle of array. And the program has to iterate from that location to re-assign the indices.
+// Hence it is O(n/2) ==> O(n).
+
+```
