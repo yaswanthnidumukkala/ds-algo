@@ -213,9 +213,10 @@ Each data strcuture have their own PROs and CONs for each one of the operations.
   - insert: O(n)
   - delete: O(n)
 
-``` const strings = ['a', 'b', 'c', 'd']; ```
+``` const strings = ['a', 'b', 'c', 'd']; ```  
 As arrays store items sequentially in memory, each item in the above array occupy 4 memory locations. 'a' occupies 4 locations and the next 4 memory locations are immediately occupied by 'b'.  
 So, it becomes easier to access the items when we know the index. That's the reason for **lookup and push**, we have O(1).  
+
 ``` 
 strings.push("e"); 
 // O(1). The program already knows the memory location of the array. And it also knows the memory location of the last element.
@@ -227,5 +228,4 @@ strings.unshift("x"); // Adds item to the start.
 strings.splice(2, 0, "something"); // Adds item at the defined location.
 // Here we are adding an element in the middle of array. And the program has to iterate from that location to re-assign the indices.
 // Hence it is O(n/2) ==> O(n).
-
 ```
