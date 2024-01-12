@@ -230,3 +230,37 @@ strings.splice(2, 0, "something"); // Adds item at the defined location.
 // Hence it is O(n/2) ==> O(n).
 ```
 #### Types of Arrays:
+- Static
+  - Fixed in Size
+  - Stored on Stack
+  - Need to specify the number of items the array could hold ahead of time
+  - As items in Array are placed in adjacent blocks of memory, there is no guarantee that the other items in the Array are placed in the next immediate memory blocks
+  - ``` int[] a_static = {1,2,3,4,5}```
+  - We solve this problem by using dynamic arrays
+- Dynamic
+  - Stored on Heap
+  - Allow us to copy and re-build the array at a new memory location, with more memory if we wanted
+  - We don't need to determine the size before hand. But can initialize them with default values
+  - ``` int[] a_dynamic = new int[10]```
+  - Memory management is done by the language and we don't have to think about it
+
+In languages like C++ which has static arrays, we do something like this  
+``` int a[5] {1,2,3,4,5} ```  
+Since this is static array, if we want to add a sixth item, we have to copy this entire code and add the sixth item.  
+But in languages like JavaScript or Python, we don't worry about it and we never really allocate memory.  
+```
+// Javascript
+var arr = [];
+
+// C#
+List<string> list = new List<string>();
+```
+They automatically allocate memory with the increase in size of memory.  
+There's times where we want to manage memory and there are times where we don't need to. That's why lower level languages like C++ are much faster than higher level languages like JS, Python etc. as low-level languages provide more control over how we manage memory.
+
+> **_Note:_** For dynamic arrays, "append" is usually O(1) similar to "push". But it can be O(n). It depends on the language that we are using.  
+> For example, in JS, arrays are dynamic. If we add a new item to the end:  
+>   - under-the-hood, JS will copy the entire array to a new memory location
+>   - copies the items to the new memory location
+>   - Adds the new item to the end
+>   - Since it is going to loop through the items, **it becomes O(n)**
