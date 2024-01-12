@@ -229,3 +229,4 @@ strings.splice(2, 0, "something"); // Adds item at the defined location.
 // Here we are adding an element in the middle of array. And the program has to iterate from that location to re-assign the indices.
 // Hence it is O(n/2) ==> O(n).
 ```
+#### Types of Arrays:
